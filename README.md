@@ -47,12 +47,12 @@ Before starting on code development you should connect the motor system together
 #### Template Codes:
 
 Because of time limitations at the end of the semester, this lab provides partially-complete template code. These template files provide most of the background infrastructure such as the encoder interface. Your goal is to complete the program by filling in portions of missing code according to instructions within the code’s comments; typically in larger code projects it’s a bad idea to put all of the functions in the main.c file. This lab splits the motor control code into a couple of separate files: motor.h and motor.c. These files are available on the assignment page for download, they are needed to be included in your μVision project.<br><br>
-The given file are uploaded in the folder "givenFiles". The file namesare :
+The given file are uploaded in the folder "givenFiles". The file names with instructions are :
 
-- main.c
-- motor.c
-- motor.h
-- lab7.tsc
+- main.c :   Replace the original main.c in your project with this file.
+- motor.c :  This file exports function prototypes to the main application.
+- motor.h :  This file contains motor and control system specific functions.
+- lab7.tsc : This is a STMStudio configuration file that sets up variable viewers and display equations.
 
 
 ### Part 2: Tuning the Controller
