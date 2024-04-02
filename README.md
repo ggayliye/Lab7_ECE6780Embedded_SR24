@@ -44,7 +44,7 @@ Required components:<br>
 
 Before starting on code development you should connect the motor system together and test to see if the H-bridge is operational. You can test the H-bridge by manually wiring the direction and enable pins to 3V or GND. Use the table in figure 7.6 to select a direction of rotation and enable the output, the motor should begin rotating once power is applied.
 
-### Part 2:Tuning the Controller
+### Part 2: Tuning the Controller
  After getting the different pieces of the PI controller operational, it’s time to tune the gain parameters to improve performance.<br>
 
 Using what I know about the different parameters from the control system modeling lab, I adjust and view the system response using STMStudio for the following scenarios:
@@ -71,10 +71,15 @@ their work individually.
 
 <ins>1st Week Notes:</ins> <br>
 
-On , these tasks are completed:
-- 
-- 
+On 29th of March, Friday, these tasks are completed:
+- Readme.md draft
+- UVision project creation
 
+<ins>2nd Week Notes:</ins> <br>
+
+On 1th of April, these tasks are completed:
+- GitHub repo crreation.
+- Readme.md update and push to Github.
 
 ## Testing
 No Unit Test files are created as the nature of the project. Manual testing 
@@ -93,7 +98,7 @@ at the beginning of the lab (pre-lab work).
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%<br>
 I am uploading the full project files in this repo. 
 Therfore, you may not need some of the information below to
 prepaire this project to run. However, I'm still including those parts below.
