@@ -5,7 +5,7 @@ Date: 29-March-2024<br>
 Course: ECE 6780 - Embedded System Design, ECE Department, The University of Utah<br>
 GitHub IDs: ggayliye <br>
 Repo: https://github.com/ggayliye/Lab7_ECE6780Embedded_SR24 <br>
-Date: By 5-April-2024, 11:59pm (Time of when submission is due/will be ready to be evaluated)<br>
+Date: By 4-April-2024, 11:59pm (Time of when submission is due/will be ready to be evaluated)<br>
 Copyright: ECE 6780, Kyle G. Gayliyev - This work may not be copied for use in Academic Coursework.
 
 ## Overview of the Lab 07
@@ -99,6 +99,7 @@ at the beginning of the lab (pre-lab work).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%<br>
+## Regarding To How To Test The Program
 I am uploading the full project files in this repo. 
 Therfore, you may not need some of the information below to
 prepaire this project to run. However, I'm still including those parts below.
