@@ -1,4 +1,4 @@
-# Lab 07: Analog Signals and the ADC/DAC
+# Lab 07: PID DC Motor Controller
 
 Authors : Kyle G. Gayliyev <br>
 Date: 29-March-2024<br>
@@ -9,32 +9,56 @@ Date: By 5-April-2024, 11:59pm (Time of when submission is due/will be ready to 
 Copyright: ECE 6780, Kyle G. Gayliyev - This work may not be copied for use in Academic Coursework.
 
 ## Overview of the Lab 07
-
+The purpose of a control system is to direct the behavior of other devices to produce an output state that matches a requested condition. Control systems vary widely in their design and are used in many different applications, such as thermostats for household heating and cruise-control for vehicles. Control systems can be either open-loop or closed-loop in design. Open-loop systems apply a process or algorithm to directly generate their output state from their inputs; they have no method of measuring the actual effect of their actions. Closed-loop control systems use their own output as a secondary input, and calculate a course of action depending on the error between the desired and current state. This process is called feedback.
 
 
 ### Required Materials:
-
+* STM32F072 Discovery board
+* motor control board
+* 12V DC motor with encoder
+* 6V power supply
+* jumper wires
 
 Lab 7 is consisted of 2 Parts:<br>
 
-* Part 1: 
-* Part 2: 
+* Part 1: Implementation of a PI Controller
+* Part 2: Tuning the Controller
 
 
-### Part 1: 
- .<br>
+### Part 1: Implementation of a PI Controller
+ Write a program performing the following tasks:<br>
+ 
+* Tracks motor speed through a quadrature encoder.
+* Generates a variable duty-cycle PWM signal to drive the H-bridge.
+* Uses a PI control loop to tune the duty-cycle to achieve the desired speed..<br>
 
+#### Testing the H-Bridge
 Instructions:<br>
+Required components:<br>
+* Jumper wire kit 
+– The TAs may have a few jumper wires, but kits are available in the stockroom for purchase. 
+* Polulu Gear Motor 
+– You’ll want to check this out from the digital lab window: ask for the motor for the embedded systems class. 
+* H-Bridge Board 
+– Ideally, the board we designed should operate correctly; if not, the TAs or the stockroom have a limited number of boards available for checkout.
 
+Before starting on code development you should connect the motor system together and test to see if the H-bridge is operational. You can test the H-bridge by manually wiring the direction and enable pins to 3V or GND. Use the table in figure 7.6 to select a direction of rotation and enable the output, the motor should begin rotating once power is applied.
 
+### Part 2:Tuning the Controller
+ After getting the different pieces of the PI controller operational, it’s time to tune the gain parameters to improve performance.<br>
 
-### Part 2:.
- :<br>
+Using what I know about the different parameters from the control system modeling lab, I adjust and view the system response using STMStudio for the following scenarios:
 
+* Speed change from 0 to 80 RPM 
+* Speed change from 80 to 50 RPM 
+* Speed change from 50 to 80 RPM 
+* Speed change from 80 to 0 RPM 
 
+To make things a bit easier the code template uses the user-button to toggle and switch around to the different speeds required. You can manually edit the target speed using STMStudio or the debugger but pressing the button should cycle between all the required scenarios.
 
-#### Exercise Specifications
+Some examples of a moderately-tuned PI controller are shown in figures 7.16 to 7.18. Having an adjusted system will cause the motor to speed up much faster than when it was un-tuned. Remember that the motor requires takes a while to slow down, and that there isn’t any way to instantly stop without using electronic braking. This means that transitions to slower speeds aren’t easily adjusted to increase the fall rate. <br>
 
+We don’t expect perfection with the tuning of your system; a reasonable performance increase over an un-tuned system it will suffice. Because it’s difficult to stop and capture screenshots from STMStudio, you won’t be required to include graphs in your postlab report. However, you’ll need to keep track of what parameters you used and describe the behavior of the system.
 
 <pre><ins>Future extensions</ins> :  There will be no future additions to this project. </pre>
 
@@ -127,7 +151,13 @@ Have a wonderful day!
 N/A
 
 # Caution/Warnings
-* 
+* This lab involves wiring systems with different operating voltages together! You MUST be careful how you connect things, or you will damage either your board or the motor encoder. Read the lab—as well as the comments in the template project—carefully!
+
+* Although Kiel μVision generates ELF-type files for programming the STM32F0, it saves them in the project directory with an .AXF file extension. This file can be found in the “<project folder>/MDK-ARM/<project name>/” directory. Make a copy and rename the file extension to .ELF for use with STMStudio.
+
+* Be careful not to connect the motor connector backwards! If you do, you’ll reverse power and ground on the quadrature encoder. Most devices aren’t designed for this condition and you’ll likely fry it.
+
+
 
 
 # Examples of Good Software Practice (GSP)
