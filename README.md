@@ -44,6 +44,17 @@ Required components:<br>
 
 Before starting on code development you should connect the motor system together and test to see if the H-bridge is operational. You can test the H-bridge by manually wiring the direction and enable pins to 3V or GND. Use the table in figure 7.6 to select a direction of rotation and enable the output, the motor should begin rotating once power is applied.
 
+#### Template Codes:
+
+Because of time limitations at the end of the semester, this lab provides partially-complete template code. These template files provide most of the background infrastructure such as the encoder interface. Your goal is to complete the program by filling in portions of missing code according to instructions within the code’s comments; typically in larger code projects it’s a bad idea to put all of the functions in the main.c file. This lab splits the motor control code into a couple of separate files: motor.h and motor.c. These files are available on the assignment page for download, they are needed to be included in your μVision project.<br><br>
+The given file are uploaded in the folder "givenFiles". The file namesare :
+
+- main.c
+- motor.c
+- motor.h
+- lab7.tsc
+
+
 ### Part 2: Tuning the Controller
  After getting the different pieces of the PI controller operational, it’s time to tune the gain parameters to improve performance.<br>
 
