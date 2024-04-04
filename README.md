@@ -174,7 +174,7 @@ N/A
 
 * Be careful not to connect the motor connector backwards! If you do, you’ll reverse power and ground on the quadrature encoder. Most devices aren’t designed for this condition and you’ll likely fry it.
 
-
+* Because of the stress the electronic brake would cause to the motor, it isn’t a good idea to use it (or the direction pins) to control the motor speed. Instead a more appropriate method is the H-bridge enable pin, when this pin is low the driver is disabled and essentially disconnected from the motor. In this state it doesn’t try to stop the motor (unlike the electronic brake), it simply isn’t providing any more power. By connecting the enable pin to a PWM output, we’ll get a very similar output signal from the H-bridge. This amplified PWM signal approximates driving the motor with an analog voltage. In order to stop the motor completely, simply hold the enable pin low long enough that the motor stops turning.
 
 
 # Examples of Good Software Practice (GSP)
