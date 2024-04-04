@@ -11,6 +11,12 @@ Copyright: ECE 6780, Kyle G. Gayliyev - This work may not be copied for use in A
 ## Overview of the Lab 07
 The purpose of a control system is to direct the behavior of other devices to produce an output state that matches a requested condition. Control systems vary widely in their design and are used in many different applications, such as thermostats for household heating and cruise-control for vehicles. Control systems can be either open-loop or closed-loop in design. Open-loop systems apply a process or algorithm to directly generate their output state from their inputs; they have no method of measuring the actual effect of their actions. Closed-loop control systems use their own output as a secondary input, and calculate a course of action depending on the error between the desired and current state. This process is called feedback.
 
+### Notes
+
+- By looking at what signal leads (rises first) the other it is possible to tell the direction that the motor is rotating.
+- By measuring the time between pulses or counting how many pulses arrive within a time period it is possible to determine the speed of the motor shaft.
+- Make sure when you are selecting input pins for the encoder interface that they are either of I/O structure type “FT” or “FTf” otherwise you’ll fry the STM32F0!
+- When determining an appropriate speed for this lab, we want something less than a 50ms period between interrupts (20Hz, good speed resolution, bad PI response), but not anything smaller than 10ms because the encoder output will be too granular to be useful.
 
 ### Required Materials:
 * STM32F072 Discovery board
