@@ -98,19 +98,30 @@ On 1th of April, these tasks are completed:
 - GitHub repo crreation.
 - Readme.md update and push to Github.
 
+By 5th of April, these tasks are completed:
+
+- PCB from soldering part is implemented
+- Motor is impletemnted
+- STM Studio is implemented
+
+
 ## Testing
 No Unit Test files are created as the nature of the project. Manual testing 
 are performed in each step to ensure code improvements. Check "Testing Instructions"
 section below.
 
 # Time Expenditures:
-<pre>Lab07: Predicted Hours: 12h		Actual Hours:	Xh		 </pre>
+<pre>Lab07: Predicted Hours: 12h		Actual Hours:	12h		 </pre>
 
 The actual hours recorded on top reflect the time spent for the assignment including the time 
 spent in labs. It excludes time spent reading and understanding the lab assignment instructions 
 at the beginning of the lab (pre-lab work).
 
 # Comments to Evaluators:
+
+- The first week went well as I implemented the initial tasks mentioned in the lab packet.
+- On the second week, I had to come to school for another day because I didn't have 200 RPM motor.
+- Also, I had to resolder my PCB as I soldered it incorrectly.
 
 
 
